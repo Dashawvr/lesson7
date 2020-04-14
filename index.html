@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #back {
+            height: 50px;
+            background-color: beige;
+        }
+
+        /*dropdown menu*/
+        .xml {
+            height: 200px;
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: aquamarine;
+        }
+        .menu ul {
+            margin: 0;
+            list-style: none;
+            padding-left: 20px;
+
+        }
+        .menu.hidden ul{
+            display: none;
+        }
+
+        /* slide show */
+        .showSlide {
+            display: none
+        }
+
+        .showSlide img {
+            width: 100px;
+        }
+
+        .slidercontainer {
+            max-width: 100px;
+            position: relative;
+            margin: auto;
+        }
+
+        .left, .right {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .right {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .left:hover, .right:hover {
+            background-color: rgba(115, 115, 115, 0.8);
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+    </style>
+</head>
+<body>
+<div id="back"> Some text here!!!</div>
+<input type="checkbox" id="cbox">
+<div class="resolve"></div>
+<div class='xml'>Use XMLHttpRequest (XHR) objects to interact with servers.
+    You can retrieve data from a URL without having to do a full page refresh.
+    This enables a Web page to update just part of a page without disrupting what the user is doing.
+    XMLHttpRequest is used heavily in AJAX programming.
+</div>
+
+<div class="menu dulces">
+    <div class="title">Somth!</div>
+    <ul>
+        <li>Ivan</li>
+        <li>Stepan</li>
+        <li>Mukhailo</li>
+    </ul>
+
+</div>
+<input type="text" id="input" value="enter some text here!">
+<input type="text" id="text" value="5">
+
+
+
+
+<div class="about_slider">
+    <div class="slidercontainer">
+        <div class="showSlide fade">
+            <img src="2(1).png">
+        </div>
+        <div class="showSlide fade">
+            <img src="work4.png">
+        </div>
+
+        <div class="showSlide fade">
+            <img src="3.png">
+        </div>
+        <!-- Navigation arrows -->
+        <a class="left" onclick="nextSlide(-1)">❮</a>
+        <a class="right" onclick="nextSlide(1)">❯</a>
+    </div>
+</div>
+
+
+<input type="text" id="word">
+<button id="check" onclick="put()">ok</button>
+
+<p id="demo"></p>
+<script src="script.js"></script>
+</body>
+</html>
